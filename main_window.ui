@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>739</height>
+    <height>618</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>800</width>
-    <height>739</height>
+    <width>10</width>
+    <height>10</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -79,8 +79,8 @@
    <widget class="QRadioButton" name="is_plylst">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>200</y>
+      <x>160</x>
+      <y>250</y>
       <width>111</width>
       <height>22</height>
      </rect>
@@ -100,8 +100,8 @@
    <widget class="QRadioButton" name="is_video">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>200</y>
+      <x>270</x>
+      <y>250</y>
       <width>97</width>
       <height>22</height>
      </rect>
@@ -122,7 +122,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>250</y>
+      <y>300</y>
       <width>131</width>
       <height>31</height>
      </rect>
@@ -140,8 +140,8 @@
     <property name="geometry">
      <rect>
       <x>180</x>
-      <y>250</y>
-      <width>221</width>
+      <y>300</y>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
@@ -181,7 +181,7 @@
      <rect>
       <x>180</x>
       <y>140</y>
-      <width>561</width>
+      <width>571</width>
       <height>31</height>
      </rect>
     </property>
@@ -215,9 +215,9 @@
    <widget class="QGroupBox" name="plylst_options">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>310</y>
-      <width>471</width>
+      <x>390</x>
+      <y>250</y>
+      <width>361</width>
       <height>181</height>
      </rect>
     </property>
@@ -331,7 +331,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>520</y>
+      <y>410</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -344,8 +344,8 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>580</y>
-      <width>751</width>
+      <y>470</y>
+      <width>721</width>
       <height>31</height>
      </rect>
     </property>
@@ -362,7 +362,7 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>630</y>
+      <y>520</y>
       <width>191</width>
       <height>41</height>
      </rect>
@@ -374,6 +374,50 @@
     </property>
     <property name="text">
      <string>Copy to clipboard</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="d_path">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>choose download path</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="selected_path">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>190</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Link type:</string>
     </property>
    </widget>
   </widget>

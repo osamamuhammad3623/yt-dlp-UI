@@ -13,8 +13,9 @@ struct Command_Configuration{
     QString link;
     bool prefix;
     QString quality;
+    QString path;
 
-    Link_Type full_plylst;
+    Link_Type type;
     int from=0;
     int to=1;
 };
@@ -43,6 +44,8 @@ private slots:
 
     void on_generate_clicked();
 
+    void on_d_path_clicked();
+
     QString get_download_quality();
 
     /* A function to generate the command based on user-input */
@@ -55,7 +58,10 @@ private slots:
     bool validate_user_inputs();
 
     /* A function to check the playlist range (starting index < stop index) */
-    bool validate_range(int f, int t);
+    bool validate_range(int from, int to);
+
+    /* A function to determine the link type: (full playlist, single video or range of a playlist)  */
+    Link_Type get_link_type();
 
 private:
     Ui::Main_Window *ui;

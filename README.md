@@ -1,1 +1,2 @@
-# yt-dlp-UI
+# yt-dlp (YouTube Downloader) UI
+## To download videos & full playlists!

@@ -20,18 +20,21 @@ Main_Window::~Main_Window()
 
 void Main_Window::on_is_plylst_clicked()
 {
+    // enable playlist options
     ui->plylst_options->setEnabled(true);
 }
 
 
 void Main_Window::on_is_video_clicked()
 {
+    // disable playlist options
     ui->plylst_options->setEnabled(false);
 }
 
 
 void Main_Window::on_full_playlist_clicked()
 {
+    // disable playlist range indices
     ui->from_index->setEnabled(false);
     ui->to_index->setEnabled(false);
 }
@@ -39,6 +42,7 @@ void Main_Window::on_full_playlist_clicked()
 
 void Main_Window::on_playlist_range_clicked()
 {
+    // enable playlist range indices
     ui->from_index->setEnabled(true);
     ui->to_index->setEnabled(true);
 }
@@ -46,16 +50,22 @@ void Main_Window::on_playlist_range_clicked()
 
 void Main_Window::on_generate_clicked()
 {
+
+    // first, validate user-input data
     if (!validate_user_inputs()){
         return;
     }
 
+    // get YT link
     QString link = ui->link->text();
 
+    // check whether to add index number before the video name (only for playlists)
     bool add_prefix = (ui->is_plylst->isChecked()) && (ui->add_prefix->isChecked());
 
+    // desired download quality
     QString download_quality = get_download_quality();
 
+    // create the configuration
     Command_Configuration config;
     config.link = link;
     config.prefix = add_prefix;
@@ -67,10 +77,11 @@ void Main_Window::on_generate_clicked()
         config.to = ui->to_index->value();
     }
 
+    // get the download path
     QString download_path = ui->selected_path->text();
     config.path = download_path;
 
-
+    // pass the configuration to the function that will generate the command
     ui->output->setText(generate_command(config));
 }
 
@@ -78,6 +89,8 @@ void Main_Window::on_generate_clicked()
 QString Main_Window::get_download_quality(){
     QString selected_op = ui->quality->currentText();
     QString q = "22"; // default is 720p
+
+    // numbers represents the quality (see yt-dlp Docs)
 
     if (selected_op == "1080p"){
         q = "137+140";
@@ -127,9 +140,9 @@ QString Main_Window::generate_command(Command_Configuration &config){
 
 
 Link_Type Main_Window::get_link_type(){
-    bool is_playlist = ui->is_plylst->isChecked();
-    bool is_playlist_full = ui->full_playlist->isChecked();
-    bool is_playlist_range = ui->playlist_range->isChecked();
+    bool is_playlist = ui->is_plylst->isChecked(); // is it a playlist?
+    bool is_playlist_full = ui->full_playlist->isChecked(); // do u want to download the whole playlist?
+    bool is_playlist_range = ui->playlist_range->isChecked(); // do u want to download a range of the playlist?
 
     if (is_playlist && is_playlist_full){
         return Playlist;
@@ -173,7 +186,7 @@ bool Main_Window::validate_user_inputs(){
     bool is_playlist_full = ui->full_playlist->isChecked();
     bool is_playlist_range = ui->playlist_range->isChecked();
 
-    // check link type (if user chose playlist, but didn't specify whether to download the whole playlist or a range of it
+    // check link type (if user chose playlist, but didn't choose whether to download the whole playlist or a range of it)
     if (is_playlist && ((!is_playlist_full) && (!is_playlist_range))){
         msgBox.setText("Choose to download the whole playlist or a range of it!");
         is_valid= false;
@@ -199,6 +212,7 @@ bool Main_Window::validate_user_inputs(){
 
 void Main_Window::on_copy_command_clicked()
 {
+    // copy the generated command to clipboard
     QClipboard* clpbord = QApplication::clipboard();
     clpbord->setText(ui->output->text());
 }
@@ -210,13 +224,14 @@ bool Main_Window::validate_range(int from, int to){
 
 void Main_Window::on_d_path_clicked()
 {
+    // open a file dialog that accepts directories only
     QFileDialog dialog(this);
     dialog.setFileMode(QFileDialog::DirectoryOnly);
 
-    QString selected_dir = "/"; // main partition is the default
+    QString selected_dir = "/"; // main partition is the default (C)
     if (dialog.exec()){
         selected_dir = dialog.selectedFiles()[0];
     }
-    ui->selected_path->setText(selected_dir);
+    ui->selected_path->setText(selected_dir); // diplay the selected path to the user
 }
 

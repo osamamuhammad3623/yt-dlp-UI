@@ -18,14 +18,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>10</width>
-    <height>10</height>
+    <width>800</width>
+    <height>618</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>100000</width>
-    <height>100000</height>
+    <width>800</width>
+    <height>618</height>
    </size>
   </property>
   <property name="font">
@@ -300,7 +300,7 @@
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>210</x>
        <y>130</y>
        <width>81</width>
        <height>31</height>
@@ -313,7 +313,7 @@
     <widget class="QSpinBox" name="to_index">
      <property name="geometry">
       <rect>
-       <x>260</x>
+       <x>250</x>
        <y>130</y>
        <width>81</width>
        <height>31</height>

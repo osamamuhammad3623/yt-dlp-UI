@@ -4,6 +4,7 @@
 #include <QMainWindow>
 
 
+/* YouTube link type (what refers to) */
 enum Link_Type{
     Video, Playlist, Range
 };
@@ -54,10 +55,10 @@ private slots:
     /* A function to copy the generated command to Windows clipboard */
     void on_copy_command_clicked();
 
-    /* A function to check the user-input data are valid */
+    /* A function to check that the user-input data are valid */
     bool validate_user_inputs();
 
-    /* A function to check the playlist range (starting index < stop index) */
+    /* A function to check/validate the playlist range (starting index < stop index) */
     bool validate_range(int from, int to);
 
     /* A function to determine the link type: (full playlist, single video or range of a playlist)  */

@@ -1,6 +1,6 @@
 # yt-dlp YouTube Downloader Command Generator
 
-yt-dlp is an open source command line application to download videos and full playlists with all kind of options.
+yt-dlp is an open source command line application to download videos and full playlists with all kind of options.  
 yt-dlp GitHub repo link: https://github.com/yt-dlp/yt-dlp
 
 -- The application aims to generate the yt-dlp command with the most used options.

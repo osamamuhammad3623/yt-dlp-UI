@@ -17,3 +17,6 @@ You have to make sure that the video is available in the quality you choose (do 
 1. Go to yt-dlp repo and download the lastest Windows release.
 2. Launch this application and enter the required data & generate the command
 3. open you terminal/CMD/Windows PowerShell in yt-dlp directory, and paste the generated command.
+
+## Interface screenshot
+![unit test](preview.png)

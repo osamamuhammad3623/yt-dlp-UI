@@ -150,6 +150,9 @@
       <pointsize>10</pointsize>
      </font>
     </property>
+    <property name="currentText">
+     <string>720p</string>
+    </property>
     <item>
      <property name="text">
       <string>1080p</string>

@@ -4,24 +4,6 @@
 #include <QMainWindow>
 
 
-/* YouTube link type (what refers to) */
-enum Link_Type{
-    Video, Playlist, Range
-};
-
-
-struct Command_Configuration{
-    QString link;
-    bool prefix;
-    QString quality;
-    QString path;
-
-    Link_Type type;
-    int from=0;
-    int to=1;
-};
-
-
 QT_BEGIN_NAMESPACE
 namespace Ui { class Main_Window; }
 QT_END_NAMESPACE
@@ -47,22 +29,21 @@ private slots:
 
     void on_d_path_clicked();
 
-    QString get_download_quality();
-
-    /* A function to generate the command based on user-input */
-    QString generate_command(Command_Configuration &config);
-
     /* A function to copy the generated command to Windows clipboard */
     void on_copy_command_clicked();
 
     /* A function to check that the user-input data are valid */
     bool validate_user_inputs();
 
-    /* A function to check/validate the playlist range (starting index < stop index) */
-    bool validate_range(int from, int to);
+    void on_link_textChanged(const QString &arg1);
 
-    /* A function to determine the link type: (full playlist, single video or range of a playlist)  */
-    Link_Type get_link_type();
+    void on_quality_currentTextChanged(const QString &arg1);
+
+    void on_add_prefix_clicked();
+
+    void on_from_index_valueChanged(int arg1);
+
+    void on_to_index_valueChanged(int arg1);
 
 private:
     Ui::Main_Window *ui;

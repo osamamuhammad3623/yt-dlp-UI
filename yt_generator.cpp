@@ -2,7 +2,7 @@
 
 string YT_Generator::generate_command()
 {
-    string command = "yt-dlp ";
+    string command = ".\\yt-dlp.exe ";
 
     command += yt_link + " ";
 

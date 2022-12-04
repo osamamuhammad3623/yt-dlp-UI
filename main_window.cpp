@@ -5,7 +5,6 @@
 #include <QMessageBox>
 #include "yt_generator.h"
 
-
 YT_Generator command_generator;
 
 Main_Window::Main_Window(QWidget *parent)

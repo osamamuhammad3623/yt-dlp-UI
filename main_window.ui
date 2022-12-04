@@ -151,7 +151,7 @@
      </font>
     </property>
     <property name="currentText">
-     <string>720p</string>
+     <string>1080p</string>
     </property>
     <item>
      <property name="text">
@@ -421,6 +421,42 @@
     </property>
     <property name="text">
      <string>Link type:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="open_cmd">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>520</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Open CMD</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>560</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>osama_muhammad</string>
     </property>
    </widget>
   </widget>

@@ -45,6 +45,8 @@ private slots:
 
     void on_to_index_valueChanged(int arg1);
 
+    void on_open_cmd_clicked();
+
 private:
     Ui::Main_Window *ui;
 };

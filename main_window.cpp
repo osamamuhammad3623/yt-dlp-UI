@@ -64,11 +64,6 @@ void Main_Window::on_generate_clicked()
     }
 
     ui->output->setText(QString::fromStdString(command_generator.generate_command()));
-
-    // launch an external CMD, user should just paste the generated command in it
-    QStringList args;
-    args << "/C" << "start";
-    QProcess::startDetached("cmd", args);
 }
 
 bool Main_Window::validate_user_inputs(){
@@ -171,5 +166,14 @@ void Main_Window::on_from_index_valueChanged(int arg1)
 void Main_Window::on_to_index_valueChanged(int arg1)
 {
     command_generator.end = arg1;
+}
+
+
+void Main_Window::on_open_cmd_clicked()
+{
+    // launch an external CMD, user should just paste the generated command in it
+    QStringList args;
+    args << "/C" << "start";
+    QProcess::startDetached("cmd", args);
 }
 

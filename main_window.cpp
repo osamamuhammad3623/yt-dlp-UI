@@ -4,6 +4,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include "yt_generator.h"
+#include "QProcess"
 
 YT_Generator command_generator;
 
@@ -63,6 +64,11 @@ void Main_Window::on_generate_clicked()
     }
 
     ui->output->setText(QString::fromStdString(command_generator.generate_command()));
+
+    // launch an external CMD, user should just paste the generated command in it
+    QStringList args;
+    args << "/C" << "start";
+    QProcess::startDetached("cmd", args);
 }
 
 bool Main_Window::validate_user_inputs(){

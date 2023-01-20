@@ -13,9 +13,8 @@ You have to make sure that the video is available in the quality you choose (do 
 4. Choose the download path.
 5. Copy the generated command to the clipboard.
 
-## How to use
-1. Download & launch this application and enter the required data & generate the command.
-2. open you terminal/CMD/Windows PowerShell in yt-dlp directory, and paste the generated command.
-
 ## Interface screenshot
 ![unit test](preview.png)
+
+## To-Do
+- Add option to download the video description (in a .description file)

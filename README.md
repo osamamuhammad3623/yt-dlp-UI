@@ -12,6 +12,7 @@ You have to make sure that the video is available in the quality you choose (do 
 3. Choose whether you want to download the whole playlist of a range of it.
 4. Choose the download path.
 5. Copy the generated command to the clipboard.
+6. Download video description in a .description file. 
 
 ## Interface screenshot
 ![unit test](preview.png)

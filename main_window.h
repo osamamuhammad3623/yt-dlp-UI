@@ -47,6 +47,8 @@ private slots:
 
     void on_open_cmd_clicked();
 
+    void on_download_desc_clicked();
+
 private:
     Ui::Main_Window *ui;
 };

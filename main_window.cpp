@@ -107,7 +107,7 @@ void Main_Window::on_d_path_clicked()
 {
     // open a file dialog that accepts directories only
     QFileDialog dialog(this);
-    dialog.setFileMode(QFileDialog::DirectoryOnly);
+    dialog.setFileMode(QFileDialog::Directory);
 
     QString selected_dir = "/"; // main partition is the default (C)
     if (dialog.exec()){
@@ -175,5 +175,13 @@ void Main_Window::on_open_cmd_clicked()
     QStringList args;
     args << "/C" << "start";
     QProcess::startDetached("cmd", args);
+}
+
+
+void Main_Window::on_download_desc_clicked()
+{
+    if(ui->download_desc->isChecked()){
+        command_generator.download_description=true;
+    }
 }
 

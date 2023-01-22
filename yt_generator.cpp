@@ -8,6 +8,10 @@ string YT_Generator::generate_command()
 
     command += get_quality() + " ";
 
+    if(download_description){
+        command+= "--write-description ";
+    }
+
     if (add_index_prefix){
         command += "-o \"%(playlist_index)s-%(title)s.%(ext)s \" ";
     }

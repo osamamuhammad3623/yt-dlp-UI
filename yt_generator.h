@@ -30,6 +30,7 @@ public:
     Link_Type link_type{Video};
     Download_Type download_type{Full_Playlist};
     bool add_index_prefix{false};
+    bool download_description{false};
 
     uint8_t start{1}, end{2}; // if download_type is Range, those variables are start/end indexes
 

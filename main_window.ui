@@ -438,7 +438,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Open CMD</string>
+     <string>Open Terminal</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_8">

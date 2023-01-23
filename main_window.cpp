@@ -20,7 +20,6 @@ Main_Window::~Main_Window()
     delete ui;
 }
 
-
 void Main_Window::on_is_plylst_clicked()
 {
     // enable playlist options
@@ -171,10 +170,17 @@ void Main_Window::on_to_index_valueChanged(int arg1)
 
 void Main_Window::on_open_cmd_clicked()
 {
-    // launch an external CMD, user should just paste the generated command in it
+    // launch an external CMD/terminal, user should just paste the generated command in it
+
+    // on windows
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
     QStringList args;
     args << "/C" << "start";
     QProcess::startDetached("cmd", args);
+#else
+    // on linux
+    system("gnome-terminal --window");
+#endif
 }
 
 

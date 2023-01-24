@@ -16,6 +16,3 @@ You have to make sure that the video is available in the quality you choose (do 
 
 ## Interface screenshot
 ![unit test](preview.png)
-
-## To-Do
-- Add option to download the video description (in a .description file)
